@@ -5,7 +5,6 @@ const BookPrice =  require('./BookPriceObject.js')
 
 let cheeper = 0;
 let expensive = 0;
-
 // array run                       
 for(let actualPrice = 0; actualPrice < BookPrice.length; actualPrice++)
 {
@@ -35,7 +34,7 @@ for(let actualPrice = 0; actualPrice < BookPriceObject.length; actualPrice++)
     // save index 
     
             // in position                 // in positions -> cheeper
-     if(BookPriceObject[actualPrice] < BookPriceObject[cheeper] )
+     if(BookPriceObject[actualPrice].price < BookPriceObject[cheeper].price )
      {
         cheeper = actualPrice;
      }
@@ -48,3 +47,14 @@ for(let actualPrice = 0; actualPrice < BookPriceObject.length; actualPrice++)
     
     console.log(`The cheeper book cost "${BookPriceObject[cheeper].price}" , with Title"${BookPriceObject[cheeper].title}" `);
     console.log(`The cheeper book cost "${BookPriceObject[expensive].price}" , with Title"${BookPriceObject[expensive].title}" `);
+
+
+
+    // array run                       
+for(let actualPrice = 0; actualPrice < BookPriceObject.length; actualPrice++)
+    {
+    
+    
+    }
+  
+   
