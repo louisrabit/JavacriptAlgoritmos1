@@ -2,6 +2,10 @@
 
 const BookPriceObject = require('./BookPriceObject.js')
 const BookPrice =  require('./BookPriceObject.js')
+const SortList =  require('./SortList.js')
+
+
+
 
 let cheeper = 0;
 let expensive = 0;
@@ -50,11 +54,24 @@ for(let actualPrice = 0; actualPrice < BookPriceObject.length; actualPrice++)
 
 
 
-    // array run                       
-for(let actualPrice = 0; actualPrice < BookPriceObject.length; actualPrice++)
-    {
-    
-    
-    }
+
+
+    for(let actualPrice = 0; actualPrice < BookPriceObject.length; actualPrice++)
+      {
+        let lower = SortList(BookPriceObject, actualPrice)
+
+        let actualBook = BookPriceObject[actualPrice]
+        console.log(`actual value is`, actualPrice)
+        console.log(`actual value is`,  BookPriceObject[actualPrice])
+        let loweBookPrice =  BookPriceObject[lower];
+        console.log(`lower price book`, BookPriceObject[lower])
+     
+BookPriceObject[actualPrice] = loweBookPrice;
+BookPriceObject[lower] = actualBook;
+
+      }
+      
+      console.log(`Order List "${BookPriceObject}"`);
+   
   
    
